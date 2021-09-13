@@ -1,11 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const CalcButton = (props) => {
   const { value, colored, span } = props;
-  const classList = `calc__btn
-      ${colored ? ' btn--colored' : ''} 
-      ${span !== 1 ? ` btn--span-${span}` : ''}`;
+  const classList = `calculator-btn
+      ${colored ? " btn--colored" : ""} 
+      ${span !== 1 ? ` btn--span-${span}` : ""}
+      ${span === 0 ? `zero_width` : ``}`;
   return (
     <button type="button" className={classList} data-name={value}>
       {value}
@@ -20,7 +21,7 @@ CalcButton.propTypes = {
 };
 
 CalcButton.defaultProps = {
-  value: 'X',
+  value: "X",
   colored: false,
   span: 1,
 };

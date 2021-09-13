@@ -12,7 +12,7 @@ const displayLogic = (total, next, operation) => {
     display = next;
   }
   if (total && operation) {
-    display = ' ';
+    display = " ";
     holder = total;
     if (next) {
       display = next;

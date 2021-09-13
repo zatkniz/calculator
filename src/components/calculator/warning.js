@@ -1,17 +1,16 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Warning = (props) => {
   const { warning } = props;
-  const warningValue = 'DO NOT DIVIDE BY 0! AGAIN, DO NOT DIVIDE BY 0!!!';
+  const warningValue = "You cannot divide by 0";
 
-  let classList = 'warning';
+  let classList = "warning";
   if (warning) {
-    classList = 'warning warning--active';
+    classList = "warning warning--active";
   }
 
   return (
     <div className={classList}>
-      <i className="fas fa-radiation" />
       <p>{warningValue}</p>
     </div>
   );

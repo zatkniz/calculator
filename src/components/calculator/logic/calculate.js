@@ -1,6 +1,6 @@
 import operate from './operate';
 
-function isNumber(item) {
+const isNumber = (item) => {
   return !!item.match(/[0-9]+/);
 }
 
@@ -13,7 +13,7 @@ function isNumber(item) {
  *   next:String       the next number to be operated on with the total
  *   operation:String  +, -, etc.
  */
-function calculate(obj, buttonName) {
+const calculate = async (obj, buttonName) => {
   if (buttonName === undefined) {
     return {};
   }
@@ -71,8 +71,9 @@ function calculate(obj, buttonName) {
 
   if (buttonName === '=') {
     if (obj.next && obj.operation) {
+      const { data: total } = await operate(obj.total, obj.next, obj.operation)
       return {
-        total: operate(obj.total, obj.next, obj.operation),
+        total: total.toString(),
         next: null,
         operation: null,
       };
@@ -106,8 +107,9 @@ function calculate(obj, buttonName) {
 
   // User pressed an operation button and there is an existing operation
   if (obj.operation) {
+    const { data: total } = await operate(obj.total, obj.next, obj.operation)
     return {
-      total: operate(obj.total, obj.next, obj.operation),
+      total: total.toString(),
       next: null,
       operation: buttonName,
     };

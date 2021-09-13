@@ -20,17 +20,17 @@ a {
 }
 
 :root {
-  --color-background: #f2e9e4;
-  --color-display: #4a4e69;
+  --color-background: #F9F1F0;
+  --color-display: #F79489;
   --color-btns-container: #fef3eb;
   --color-calc-btn: #f2e9e4;
-  --color-calc-btn-colored: #ffb685;
+  --color-calc-btn-colored: #F8AFA6;
   --color-warning: rgb(255, 53, 53);
   --color-background-dark: #22223b;
   --color-display-dark: #4a4e69;
   --color-btns-container-dark: #fdcdad;
   --color-calc-btn-dark: #f2e9e4;
-  --color-calc-btn-colored-dark: #ffb685;
+  --color-calc-btn-colored-dark: #fff;
   --color-blue-shade-dark: #c3c6d5;
   --color-light: #f2e9e4;
 }
@@ -44,9 +44,11 @@ html {
 body {
   font-size: 1.6rem;
   color: var(--color-background-dark);
+  height: 100%;
 }
 
 .app {
   max-width: 96rem;
   margin: 6rem auto 0;
+  height: 100%;
 }

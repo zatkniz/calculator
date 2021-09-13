@@ -1,10 +1,9 @@
-import Calc from '../components/calculator/calc';
-import './calculator.css';
+import CalculatorComponent from "../components/calculator/calculator";
+import "./calculator.css";
 
 const Calculator = () => (
   <div className="calc-container">
-    <h2 className="calculator-title">Let&apos;s do some math!</h2>
-    <Calc />
+    <CalculatorComponent />
   </div>
 );
 
